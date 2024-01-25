@@ -15,14 +15,13 @@
 
 <script>
     function redirectToGoodbye() {
-        var firstName = document.getElementById("firstName").value;
-        var lastName = document.getElementById("lastName").value;
+
 
         // Формируем URL с параметрами
-        var url = "http://localhost:8080/goodbye?name=" + encodeURIComponent(firstName) + "&surname=" + encodeURIComponent(lastName);
+        window.location.href = "http://localhost:8080/goodbye?name=" + encodeURIComponent(document.getElementById("firstName").value) + "&surname=" + encodeURIComponent(document.getElementById("lastName").value);
 
         // Переходим по URL
-        window.location.href = url;
+
     }
 </script>
 </body>
